@@ -1,9 +1,11 @@
 <?php
 //el método POST nos va a permitir recepcionar información
 //Se recibe la información del formulario HTML (Método POST)
-    $nombre = $_POST['txtNombre'];
+    if($_POST){//Si no ponemos esta instrucción, al no enviar datos y estar imprimiendo con echo, nos va a soltar un warning de que no hay nada que imprimir
+    $nombre = $_POST['txtNombre'];//almaceno el valor que viene del formulario en la variable nombre
 
     echo "Hola ".$nombre;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
